@@ -1,14 +1,9 @@
-// jQuery loader
-$(function () { 
-
-  // Set up a basic bar chart
- 
-  $('#container').highcharts({
-      chart: {
-        type: 'column'  // <- Chart type
-      },
-      series: [{
-          data: [3, 7, 10, 6, 2]
-      }]
-  });
+$('#container').highcharts({
+  // Define chart type
+  chart: {
+      type: 'column'
+  },
+  data: {
+    googleSpreadsheetKey: '1MplqM1l3YE7nmqjocyQbKruLbLOBN-n90MM1-1H9cSI',  // <- set the data source
+  },
 });
