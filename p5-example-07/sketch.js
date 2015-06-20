@@ -1,6 +1,11 @@
 // some random numbers
 var data = [3, 7, 10, 6, 2];
 
+// some constants
+var DIAMETER = 5;
+var SCALE = 75;
+var SPACING = 5;
+
 //-----------------------------------------------------------------------------
 // Setup the sketch
 function setup() {
@@ -20,8 +25,8 @@ function draw() {
   // for each item:
   for (var i = 0; i < count; i++){
 
-    var w = width/count-5;
-    var h = -data[i]*75;
+    var w = width/count-SPACING;
+    var h = -data[i]*SCALE;
     var x = (w+5)*i;
     var y = height;
     var c = color(data[i]*25, 100, 100, 200);
@@ -36,7 +41,7 @@ function draw() {
     fill(100);
 
     // draw the marker
-    ellipse(x+w, y+h, 5, 5);
+    ellipse(x+w, y+h, DIAMETER, DIAMETER);
 
   }
 }

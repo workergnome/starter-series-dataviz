@@ -1,6 +1,11 @@
 // some random numbers
 var data = [3, 7, 10, 6, 2];
 
+// some constants
+var DIAMETER = 5;
+var SCALE = 75;
+var SPACING = 5;
+
 //-----------------------------------------------------------------------------
 // Setup the sketch
 function setup() {
@@ -34,7 +39,7 @@ function draw() {
 
     // calculate some values
     var w = (width-50)/count-5;
-    var h = -data[i]*75;
+    var h = -data[i]*SCALE;
     var x = (w+5)*i+50;
     var y = height;
 
@@ -42,7 +47,7 @@ function draw() {
     rect(x, y, w, h);
 
     // draw the circle
-    ellipse(x+w, y+h, 5, 5);
+    ellipse(x+w, y+h, DIAMETER, DIAMETER);
   }
 
 

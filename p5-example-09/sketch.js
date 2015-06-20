@@ -3,6 +3,11 @@ var data = [3, 7, 10, 6, 2];
 var data2 =[5, 8, 1, 8, 3];
 var data3 = ['Cat', 'Dog', 'Cat', 'Cat', 'Dog'];
 
+// some constants
+var DIAMETER = 5;
+var SCALE = 75;
+var SPACING = 5;
+
 //-----------------------------------------------------------------------------
 // Setup the sketch
 function setup() {
@@ -23,8 +28,8 @@ function draw() {
   for (var i = 0; i < count; i++){
 
     // Calculate some values
-    var w = width/count-5;
-    var h = -data[i]*75;
+    var w = width/count-SPACING;
+    var h = -data[i]*SCALE;
     var x = (w+5)*i;
     var y = height;
     var c = color((data3[i] == "Cat" ? 0 : 255), 100, 100, 200);
