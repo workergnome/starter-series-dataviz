@@ -1,9 +1,29 @@
-$('#container').highcharts({
-  // Define chart type
-  chart: {
-      type: 'column'
-  },
-  data: {
-    googleSpreadsheetKey: '1MplqM1l3YE7nmqjocyQbKruLbLOBN-n90MM1-1H9cSI',  // <- set the data source
-  },
+  // Set up a basic bar chart
+ 
+$(function () {
+    $('#container').highcharts({
+    chart: {
+        backgroundColor: '#FCFFC5',
+        type: 'line'
+    },
+    xAxis: {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 
+                   'May', 'Jun', 'Jul', 'Aug', 
+                   'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    legend: {
+      layout: 'vertical',
+      backgroundColor: '#FFFFFF',
+      floating: true,
+      align: 'left',
+      x: 100,
+      verticalAlign: 'top',
+      y: 70
+    },
+    series: [{
+      data: [29.9, 71.5, 106.4, 129.2, 
+             144.0, 176.0, 135.6, 148.5, 
+             216.4, 194.1, 95.6, 54.4]
+    }]
+  });
 });

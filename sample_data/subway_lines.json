@@ -1,0 +1,4 @@
+{
+  "lines": [ "Red", "Blue", "Green", "Silver", "Yellow", "Brown"],
+  "cars_per_line": [6,6,4,8,3,5] 
+}
